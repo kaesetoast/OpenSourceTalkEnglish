@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>OpenSource</title>
+    <script src="../../lib/pik.js"></script>
+    <!-- Important - do not remove or rename! -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Change theme here -->
+    <script type="text/javascript">
+        window.addEvent('domready', function () {
+            document.id('total-slides').set("text", pik.slides.length);
+            document.id('current-slide').set("text", window.parent.pik.getCurrent() + 1);
+        });
+        window.parent.addEvent('hashchange', function () {
+            window.document.id('current-slide').set("text", window.parent.pik.getCurrent() + 1);
+        });
+    </script>
+</head>
+<body>
+
+<div id="header"></div>
+
+<div id="Pik-hide"></div>
+<!-- Important - do not remove or rename! -->
+
+<div id="Pik-presentation-container"> <!-- Important - do not remove or rename! -->
+
+<div class="pik-slide">
+    <div class="center">
+        <div class="center"><img src="assets/opensource.svg" alt="OpenSource" style="height: 22em"></div>
+    </div>
+</div>
+
+<div class="pik-slide">
+    <div class="center">
+        <div class="center">
+            <h1 class="between-title">Thanks for your attention!</h1>
+        </div>
+    </div>
+</div>
+
+<div id="footer">
+    <table>
+        <tr>
+            <td>11.06.2012</td>
+            <td>Philipp Nowinski</td>
+            <td><span id="current-slide"></span> / <span id="total-slides"></span></td>
+        </tr>
+    </table>
+</div>
+
+</div>
+<!-- End #Pik-presentation-container. Do not remove or rename! -->
+
+</body>
+</html>
